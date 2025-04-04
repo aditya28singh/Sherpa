@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './components/auth/login'; 
-import { AdminLayout } from './components/admin/adminIndex';
+import { MentorDashboard } from './components/admin/adminIndex';
 import { MentorLayout } from './components/mentor/mentorIndex';
 import { StudentLayout } from './components/student/studentIndex';
 // import SelectRole from './components/common/SelectRole'; 
@@ -45,7 +45,7 @@ export default function App() {
         <Route path="/admin" element={
           <RequireAuth>
             <RoleRoute allowedRoles={['admin']}>
-              <AdminLayout />
+              <MentorDashboard />
             </RoleRoute>
           </RequireAuth>
         } />
